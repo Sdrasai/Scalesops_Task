@@ -4,12 +4,11 @@ const { Client } = require("pg");
 const { google } = require("googleapis");
 const fs = require("fs").promises;
 const path = require("path");
-const { log } = require("console");
 
 const customsearch = google.customsearch("v1");
 
 async function fetchImageUrls(query, numImages) {
-  console.log(`Searching for ${query} images please wait a few second...`);
+  console.log(`Searching for ${query} images please wait a few second`);
   const res = await customsearch.cse.list({
     auth: process.env.GOOGLE_API_KEY,
     cx: process.env.GOOGLE_CSE_ID,
@@ -21,7 +20,7 @@ async function fetchImageUrls(query, numImages) {
 }
 
 async function downloadImage(url, filename) {
-  console.log("Trying to download the images");
+  console.log("downloading the images...");
   const response = await axios({
     url,
     responseType: "arraybuffer",
