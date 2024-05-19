@@ -3,14 +3,6 @@
 This project is a Node.js application that fetches images from Google search results based on a specified search query and stores them securely in a PostgreSQL database. The application is containerized using Docker and can be easily deployed using Docker Compose.
 
 
-Also you can use this command `node index.js "search input" number of images` for example:
-
-```plaintext
-node index.js "dogs" 3
-``` 
-
-It will download 3 images of dogs and saved them in a image_*.jpg and it will store them in Postgres database
-
 ## Prerequisites
 
 - Docker
@@ -31,6 +23,40 @@ PG_DATABASE=your_database_name
 PG_USER=your_postgres_username
 PG_PASSWORD=your_postgres_password
 ```
+
+3. Build and start the Docker containers:
+
+    ```sh
+    docker-compose up --build
+    ```
+
+## Usage
+
+1. Run the application:
+
+    ```sh
+    node index.js "cute kittens" 3
+    ```
+
+    This command will fetch, download, and store 3 images of "cute kittens" in the PostgreSQL database.
+
+## Running Tests
+
+1. Install development dependencies:
+
+    ```sh
+    npm install --save-dev jest axios-mock-adapter pg-mock
+    ```
+
+2. Run the tests:
+
+    ```sh
+    npm test
+    ```
+
+    This will execute all the tests in the `tests` directory and output the results.
+
+
 
 
 
