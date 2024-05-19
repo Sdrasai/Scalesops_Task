@@ -1,6 +1,7 @@
 # Google Image Fetcher
 
 This project is a Node.js application that fetches images from Google search results based on a specified search query and stores them securely in a PostgreSQL database. The application is containerized using Docker and can be easily deployed using Docker Compose.
+Also you can use this command `node index.js "search input" number of images` for example `node index.js "dogs" 3` it will download 3 images of dogs and saved them in a image_*.jpg and it will store them in Postgres database
 
 ## Prerequisites
 
