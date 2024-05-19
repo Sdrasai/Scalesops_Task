@@ -60,7 +60,7 @@ async function main(query, numImages) {
       console.log(`Image ${i + 1} stored successfully.`);
     }
   } catch (error) {
-    console.error("Error:", error);
+    console.log("Error:", error);
   }
 }
 
@@ -68,3 +68,5 @@ const query = process.argv[2] || "cute kittens";
 const numImages = parseInt(process.argv[3], 10) || 3;
 
 main(query, numImages);
+
+module.exports = { fetchImageUrls, downloadImage, storeImageData };
