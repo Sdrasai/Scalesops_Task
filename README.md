@@ -19,6 +19,6 @@ GOOGLE_CSE_ID=your_cse_id
 PG_HOST=postgres
 PG_PORT=5432
 PG_DATABASE=your_database_name
-PG_USER=rp
+PG_USER=your_postgres_username
 PG_PASSWORD=your_postgres_password
 ```
