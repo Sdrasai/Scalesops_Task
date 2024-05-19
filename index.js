@@ -66,6 +66,6 @@ async function main(query, numImages) {
 }
 
 const query = process.argv[2] || "cute kittens";
-const numImages = parseInt(process.argv[3], 10) || 10;
+const numImages = parseInt(process.argv[3], 10) || 3;
 
 main(query, numImages);

@@ -1,0 +1,30 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=10107731
+      - POSTGRES_DATABASE="scalesops_task"
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data_container:/data/db
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scalesops-docker-app
+    environment:
+      - PORT=${PORT}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    volumes:
+      - ./:/app
+
+volumes:
+  postgres_data_container:
