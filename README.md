@@ -3,6 +3,7 @@
 This project is a Node.js application that fetches images from Google search results based on a specified search query and stores them securely in a PostgreSQL database. The application is containerized using Docker and can be easily deployed using Docker Compose.
 
 
+
 ## Prerequisites
 
 - Docker
